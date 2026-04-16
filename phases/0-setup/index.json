@@ -2,9 +2,39 @@
   "project": "maximum0 포트폴리오",
   "phase": "0-setup",
   "steps": [
-    { "step": 0, "name": "next-init",     "status": "pending" },
-    { "step": 1, "name": "code-quality",  "status": "pending" },
-    { "step": 2, "name": "tailwind-v4",   "status": "pending" },
-    { "step": 3, "name": "base-layout",   "status": "pending" }
-  ]
+    {
+      "step": 0,
+      "name": "next-init",
+      "status": "completed",
+      "started_at": "2026-04-16T18:35:43+0900",
+      "summary": "Next.js 16.2.4 프로젝트 초기화 완료. framer-motion, pretendard 설치. src/data, src/types 보존 확인. npm run build 통과.",
+      "completed_at": "2026-04-16T18:40:41+0900"
+    },
+    {
+      "step": 1,
+      "name": "code-quality",
+      "status": "completed",
+      "started_at": "2026-04-16T18:40:48+0900",
+      "summary": "Prettier, Husky, lint-staged, commitlint, Vitest 설정 완료. pre-commit/commit-msg 훅 활성화",
+      "completed_at": "2026-04-16T18:45:06+0900"
+    },
+    {
+      "step": 2,
+      "name": "tailwind-v4",
+      "status": "completed",
+      "started_at": "2026-04-16T18:45:17+0900",
+      "summary": "Tailwind v4 업그레이드 완료. @theme 토큰(색상 12개, 폰트 2개) 적용. prefers-reduced-motion 대응 포함",
+      "completed_at": "2026-04-16T18:46:46+0900"
+    },
+    {
+      "step": 3,
+      "name": "base-layout",
+      "status": "completed",
+      "started_at": "2026-04-16T18:46:59+0900",
+      "summary": "layout.tsx(Space Grotesk + Pretendard 폰트, 메타데이터), page.tsx(섹션 스켈레톤 5개), opengraph-image.tsx 작성 완료. layout.test.tsx 포함. next/font Vitest 모킹 추가.",
+      "completed_at": "2026-04-16T18:49:14+0900"
+    }
+  ],
+  "created_at": "2026-04-16T18:35:43+0900",
+  "completed_at": "2026-04-16T18:50:17+0900"
 }
