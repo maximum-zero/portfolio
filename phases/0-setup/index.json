@@ -1,0 +1,10 @@
+{
+  "project": "maximum0 포트폴리오",
+  "phase": "0-setup",
+  "steps": [
+    { "step": 0, "name": "next-init",     "status": "pending" },
+    { "step": 1, "name": "code-quality",  "status": "pending" },
+    { "step": 2, "name": "tailwind-v4",   "status": "pending" },
+    { "step": 3, "name": "base-layout",   "status": "pending" }
+  ]
+}
