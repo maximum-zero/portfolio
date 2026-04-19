@@ -5,7 +5,7 @@ import RootLayout from './layout'
 
 describe('RootLayout', () => {
   it('metadata title이 올바른 값이다', () => {
-    expect(metadata.title).toBe('maximum0 — 백엔드 개발자')
+    expect(metadata.title).toBe('최대영 | 백엔드 개발자')
   })
 
   it('metadata description이 INTRO 첫 문장으로 시작한다', () => {
@@ -14,7 +14,7 @@ describe('RootLayout', () => {
   })
 
   it('openGraph title이 설정되어 있다', () => {
-    expect(metadata.openGraph?.title).toBe('maximum0 — 백엔드 개발자')
+    expect(metadata.openGraph?.title).toBe('최대영 | 백엔드 개발자')
   })
 
   it('twitter card가 summary_large_image이다', () => {

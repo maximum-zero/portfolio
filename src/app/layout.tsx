@@ -1,12 +1,20 @@
 import type { Metadata } from 'next'
-import { Space_Grotesk } from 'next/font/google'
+import { Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import localFont from 'next/font/local'
 import { INTRO, PROFILE } from '@/data/profile'
+import Nav from '@/components/layout/Nav'
+import FloatingActions from '@/components/layout/FloatingActions'
 import './globals.css'
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-display',
+  display: 'swap',
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
   display: 'swap',
 })
 
@@ -17,10 +25,10 @@ const pretendard = localFont({
 })
 
 export const metadata: Metadata = {
-  title: `${PROFILE.nickname} — ${PROFILE.role}`,
+  title: `${PROFILE.name} | ${PROFILE.role}`,
   description: INTRO.split('.')[0] + '.',
   openGraph: {
-    title: `${PROFILE.nickname} — ${PROFILE.role}`,
+    title: `${PROFILE.name} | ${PROFILE.role}`,
     description: INTRO.split('.')[0] + '.',
     type: 'website',
   },
@@ -35,8 +43,23 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ko" className={`${spaceGrotesk.variable} ${pretendard.variable}`}>
-      <body>{children}</body>
+    <html
+      lang="ko"
+      data-mode="light"
+      className={`${spaceGrotesk.variable} ${pretendard.variable} ${jetbrainsMono.variable}`}
+    >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var m=localStorage.getItem('color-mode')||'light';document.documentElement.setAttribute('data-mode',m);})();`,
+          }}
+        />
+      </head>
+      <body>
+        <Nav />
+        {children}
+        <FloatingActions />
+      </body>
     </html>
   )
 }
