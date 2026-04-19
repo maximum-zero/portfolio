@@ -1,0 +1,36 @@
+{
+  "project": "maximum0 포트폴리오",
+  "phase": "2-qa",
+  "steps": [
+    {
+      "step": 1,
+      "name": "visual-fixes",
+      "status": "pending"
+    },
+    {
+      "step": 2,
+      "name": "layout-spacing",
+      "status": "pending"
+    },
+    {
+      "step": 3,
+      "name": "mobile-responsive",
+      "status": "pending"
+    },
+    {
+      "step": 4,
+      "name": "content-policy",
+      "status": "pending"
+    },
+    {
+      "step": 5,
+      "name": "inline-style-cleanup",
+      "status": "pending"
+    },
+    {
+      "step": 6,
+      "name": "component-review",
+      "status": "pending"
+    }
+  ]
+}
