@@ -6,5 +6,6 @@ const mockFont = () => ({
 })
 
 export const Space_Grotesk = mockFont
+export const JetBrains_Mono = mockFont
 export const Inter = mockFont
 export default mockFont

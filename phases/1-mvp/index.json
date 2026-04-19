@@ -1,0 +1,48 @@
+{
+  "project": "maximum0 포트폴리오",
+  "phase": "1-mvp",
+  "steps": [
+    {
+      "step": 0,
+      "name": "data-foundation",
+      "status": "completed",
+      "summary": "CertItem/BlogPost/PillarItem 타입 추가, PILLARS/CERTS/BLOG_POSTS 데이터 생성, src/lib/utils.ts(getSkillByName/getAllSkills) 및 테스트 파일 작성 완료"
+    },
+    {
+      "step": 1,
+      "name": "layout-shell",
+      "status": "completed",
+      "summary": "Nav(pill/모바일 햄버거), FloatingActions, Footer 컴포넌트 생성, layout.tsx에 JetBrains Mono+다크모드 스크립트 추가, page.tsx 섹션 id 정리"
+    },
+    {
+      "step": 2,
+      "name": "hero-pillars",
+      "status": "completed",
+      "summary": "Hero(슬로건+동심원ring+stagger), Pillars(3카드 그리드+whileInView) 구현, framer-motion 목 추가, page.tsx에 연결"
+    },
+    {
+      "step": 3,
+      "name": "techstack",
+      "status": "completed",
+      "summary": "TechIcon(iconSlug/폴백), TechStackClient(카테고리 필터 탭+opacity), TechStack(Server Component) 구현, next/image 목 추가, 25개 테스트 통과"
+    },
+    {
+      "step": 4,
+      "name": "experience-certs",
+      "status": "completed",
+      "summary": "Experience(alternating 타임라인, WORK 뱃지, accent bullet), Certs(체크 뱃지) 구현, page.tsx 연결, 27개 테스트 통과"
+    },
+    {
+      "step": 5,
+      "name": "portfolio",
+      "status": "completed",
+      "summary": "ProjectModal(scale+스크롤락+기술아이콘+섹션제목), ProjectList(카드아이콘+scroll:false+named-group), Portfolio(Server+Suspense) 구현, 30개 테스트 통과"
+    },
+    {
+      "step": 6,
+      "name": "blog-contact",
+      "status": "completed",
+      "summary": "Blog(BLOG_URL 비어있으면 null), Contact(email+github 링크, whileInView 애니메이션) 구현, page.tsx 연결, 33개 테스트 통과"
+    }
+  ]
+}

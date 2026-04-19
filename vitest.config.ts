@@ -14,6 +14,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
       'next/font/google': path.resolve(__dirname, './src/test/mocks/next-font.ts'),
       'next/font/local': path.resolve(__dirname, './src/test/mocks/next-font.ts'),
+      'framer-motion': path.resolve(__dirname, './src/test/mocks/framer-motion.ts'),
+      'next/image': path.resolve(__dirname, './src/test/mocks/next-image.ts'),
+      'next/navigation': path.resolve(__dirname, './src/test/mocks/next-navigation.ts'),
     },
   },
 })
