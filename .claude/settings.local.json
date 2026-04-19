@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(~/.local/bin/pytest scripts/test_execute.py -v)"
+      "Bash(~/.local/bin/pytest scripts/test_execute.py -v)",
+      "Bash(git reset *)",
+      "Bash(git branch *)",
+      "Bash(git checkout *)",
+      "Bash(cp \"/home/maximum0/.claude/projects/-mnt-c-Users-maximum0-Documents-develop-repository-private-portfolio/f5db552a-a7a1-4c9f-ac1e-e84bd999841b/tool-results/webfetch-1776530259211-1b85jz.bin\" /tmp/design.gz)",
+      "Bash(gunzip -f /tmp/design.gz)",
+      "Read(//tmp/**)"
     ]
   }
 }
