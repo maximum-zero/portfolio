@@ -11,7 +11,7 @@ export interface ProjectLink {
 
 export interface ProjectDetail {
   overview: string
-  role?: string        // 팀 프로젝트만 작성
+  features?: string[] // 주요기능
   problem: string[]
   solution: string[]
   result: string[]
@@ -22,8 +22,10 @@ export interface Project {
   title: string
   type: ProjectType
   period: string
+  members?: string // 참여인원 (예: "1인", "4인 팀")
   category: ProjectCategory
-  summary: string      // 카드용 한 줄 설명
+  summary: string // 카드용 한 줄 설명
+  icon?: string // public/icons/ 경로 (예: '/icons/project.png')
   techStack: string[]
   links: ProjectLink
   detail: ProjectDetail
