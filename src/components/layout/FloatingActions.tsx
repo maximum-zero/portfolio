@@ -15,25 +15,17 @@ function FabBtn({
   children: React.ReactNode
 }) {
   const cls =
-    'w-12 h-12 rounded-full border border-line bg-surface text-ink-muted grid place-items-center cursor-pointer transition-all duration-200 hover:bg-accent hover:text-accent-ink hover:border-accent hover:-translate-y-0.5'
-  const style = { boxShadow: '0 6px 18px rgba(0,0,0,0.08)' }
+    'w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-line bg-surface text-ink-muted grid place-items-center cursor-pointer transition-all duration-200 hover:bg-accent hover:text-accent-ink hover:border-accent hover:-translate-y-0.5 shadow-icon'
 
   if (href) {
     return (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={label}
-        className={cls}
-        style={style}
-      >
+      <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className={cls}>
         {children}
       </a>
     )
   }
   return (
-    <button onClick={onClick} aria-label={label} className={cls} style={style}>
+    <button onClick={onClick} aria-label={label} className={cls}>
       {children}
     </button>
   )
@@ -51,7 +43,7 @@ export default function FloatingActions() {
 
   return (
     <div
-      className="fixed bottom-6 right-6 z-40 flex flex-col gap-2.5 transition-[transform,opacity] duration-300"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col gap-2 sm:gap-2.5 transition-[transform,opacity] duration-300"
       style={
         visible ? undefined : { transform: 'translateY(20px)', opacity: 0, pointerEvents: 'none' }
       }

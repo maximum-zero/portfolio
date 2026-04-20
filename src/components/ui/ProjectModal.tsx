@@ -23,19 +23,27 @@ const LINK_LABELS: Record<string, string> = {
 
 function ProjectIcon({ icon, title }: { icon?: string; title: string }) {
   if (icon) {
-    return <Image src={icon} alt={title} width={48} height={48} className="object-contain" />
+    return (
+      <Image
+        src={icon}
+        alt={title}
+        width={40}
+        height={40}
+        className="object-contain w-8 h-8 sm:w-10 sm:h-10"
+      />
+    )
   }
   return (
     <svg
-      width="48"
-      height="48"
+      width="40"
+      height="40"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
       strokeWidth="1.2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="text-ink-muted"
+      className="w-8 h-8 sm:w-10 sm:h-10 text-ink-muted"
     >
       <rect x="3" y="3" width="7" height="7" rx="1" />
       <rect x="14" y="3" width="7" height="7" rx="1" />
@@ -73,7 +81,10 @@ function SectionBlock({ label, items }: { label: string; items: string[] }) {
       <p className="font-display text-[15px] font-semibold text-ink mb-2.5">{label}</p>
       <ul className="grid gap-2">
         {items.map((item, i) => (
-          <li key={i} className="text-[15px] font-light text-ink-body leading-relaxed flex gap-2">
+          <li
+            key={i}
+            className="text-sm md:text-[15px] font-light text-ink-body leading-relaxed flex gap-2"
+          >
             <span className="text-ink flex-shrink-0">•</span>
             <span>{item}</span>
           </li>
@@ -102,12 +113,12 @@ export default function ProjectModal({ project, onClose, onPrev, onNext }: Proje
 
   return (
     <div
-      className="fixed inset-0 z-50 grid place-items-center p-6"
+      className="fixed inset-0 z-50 grid place-items-center p-0 sm:p-6"
       style={{ background: 'rgba(15,15,15,0.6)' }}
       onClick={onClose}
     >
       <motion.div
-        className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl"
+        className="relative w-full max-w-3xl h-[100dvh] sm:h-auto sm:max-h-[90vh] overflow-y-auto rounded-none sm:rounded-2xl modal-scroll"
         style={{ background: 'var(--color-surface)', boxShadow: '0 24px 72px rgba(0,0,0,0.3)' }}
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -117,7 +128,7 @@ export default function ProjectModal({ project, onClose, onPrev, onNext }: Proje
       >
         {/* 닫기 */}
         <div
-          className="sticky top-0 z-10 flex justify-end px-6 pt-5 pb-2"
+          className="sticky top-0 z-10 flex justify-end px-4 sm:px-6 pt-4 sm:pt-5 pb-2"
           style={{ background: 'var(--color-surface)' }}
         >
           <button
@@ -139,7 +150,7 @@ export default function ProjectModal({ project, onClose, onPrev, onNext }: Proje
           </button>
         </div>
 
-        <div className="px-8 pb-10">
+        <div className="px-4 sm:px-5 md:px-8 pb-10">
           {/* 헤더: 아이콘 + 제목 */}
           <div className="mb-5">
             <ProjectIcon icon={project.icon} title={project.title} />
@@ -150,23 +161,25 @@ export default function ProjectModal({ project, onClose, onPrev, onNext }: Proje
               >
                 {project.title}
               </h2>
-              <p className="text-[15px] text-ink-muted leading-relaxed mt-1.5">{project.summary}</p>
+              <p className="text-sm md:text-[15px] text-ink-muted leading-relaxed mt-1.5">
+                {project.summary}
+              </p>
             </div>
           </div>
 
           {/* 메타: 기간 + 참여인원 */}
-          <div className="flex gap-10 mb-5">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-10 mb-5">
             <div>
               <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-ink-muted mb-1.5">
                 기간
               </p>
-              <p className="text-[15px] text-ink-body">{project.period}</p>
+              <p className="text-sm md:text-[15px] text-ink-body">{project.period}</p>
             </div>
             <div>
               <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-ink-muted mb-1.5">
                 참여인원
               </p>
-              <p className="text-[15px] text-ink-body">
+              <p className="text-sm md:text-[15px] text-ink-body">
                 {project.members ?? (project.type === 'personal' ? '1인' : '팀')}
               </p>
             </div>
@@ -212,7 +225,7 @@ export default function ProjectModal({ project, onClose, onPrev, onNext }: Proje
             <p className="font-display text-[15px] font-semibold text-ink mb-4">개요</p>
             <div className="flex items-start gap-2">
               <span className="text-ink flex-shrink-0 mt-[1px]">•</span>
-              <p className="text-[15px] font-light text-ink-body leading-relaxed">
+              <p className="text-sm md:text-[15px] font-light text-ink-body leading-relaxed">
                 {project.detail.overview}
               </p>
             </div>
@@ -226,7 +239,7 @@ export default function ProjectModal({ project, onClose, onPrev, onNext }: Proje
                 {project.detail.features.map((item, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <span className="text-ink flex-shrink-0 mt-[1px]">•</span>
-                    <span className="text-[15px] font-light text-ink-body leading-relaxed">
+                    <span className="text-sm md:text-[15px] font-light text-ink-body leading-relaxed">
                       {item}
                     </span>
                   </li>

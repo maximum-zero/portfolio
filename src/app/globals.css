@@ -29,8 +29,15 @@
 :root {
   --color-accent-soft: color-mix(in oklab, var(--color-accent) 22%, transparent);
   --section-pad: 120px;
-  --container: min(1120px, 100% - 48px);
-  --container-narrow: min(880px, 100% - 48px);
+  --container: min(1120px, 100% - 32px);
+  --container-narrow: min(880px, 100% - 32px);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --container: min(1120px, 100% - 48px);
+    --container-narrow: min(880px, 100% - 48px);
+  }
 }
 
 html[data-mode='dark'] {
@@ -118,10 +125,29 @@ body {
 }
 
 /* Icon shadow — adapts to dark mode via color-mix */
+/* TechStack icon grid — fixed column width matches icon size, no 1fr stretch */
+.grid-techstack {
+  grid-template-columns: repeat(auto-fill, 40px);
+}
+@media (min-width: 768px) {
+  .grid-techstack {
+    grid-template-columns: repeat(auto-fill, 64px);
+  }
+}
+
 .shadow-icon {
   box-shadow:
     0 2px 8px color-mix(in oklab, var(--color-ink) 8%, transparent),
     0 1px 3px color-mix(in oklab, var(--color-ink) 5%, transparent);
+}
+
+/* Hide scrollbar while keeping scroll functionality */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 
 /* Text outline utilities */
@@ -165,6 +191,22 @@ body {
 .contact-row:hover .contact-row__icon {
   background: var(--color-accent);
   color: var(--color-surface);
+}
+
+/* ProjectModal scrollbar */
+.modal-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-strong) transparent;
+}
+.modal-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.modal-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.modal-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-line-strong);
+  border-radius: 2px;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -108,12 +108,12 @@ export default function CoreStrengths() {
             <motion.div
               key={pillar.title}
               variants={reduced ? {} : FADE_UP}
-              className="group border border-line rounded-xl p-7 bg-surface transition-transform duration-300 hover:-translate-y-1 hover:border-accent"
+              className="group border border-line rounded-xl p-5 md:p-7 bg-surface transition-transform duration-300 hover:-translate-y-1 hover:border-accent"
             >
               <div className="w-11 h-11 border border-ink rounded-xl grid place-items-center mb-5 transition-colors duration-300 group-hover:bg-accent group-hover:border-accent group-hover:text-accent-ink">
                 {ICONS[i]}
               </div>
-              <h3 className="font-display text-[22px] font-bold tracking-[-0.01em] text-ink mb-2.5">
+              <h3 className="font-display text-[18px] md:text-[22px] font-bold tracking-[-0.01em] text-ink mb-2.5">
                 {pillar.title}
               </h3>
               <p className="text-ink-muted text-sm leading-relaxed">{pillar.description}</p>
