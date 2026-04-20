@@ -49,9 +49,9 @@ export default function TechStackClient({ skills }: TechStackClientProps) {
   return (
     <div>
       {/* 필터 탭 — pill 컨테이너 */}
-      <div className="flex justify-center mb-12">
+      <div className="mb-12 overflow-x-auto pb-1 scrollbar-hide">
         <div
-          className="inline-flex flex-wrap gap-1 p-1.5 rounded-full"
+          className="flex flex-nowrap gap-1 p-1.5 rounded-full w-max mx-auto"
           style={{ background: 'var(--color-card)' }}
         >
           {FILTER_TABS.map(({ key, label }) => (
@@ -74,8 +74,7 @@ export default function TechStackClient({ skills }: TechStackClientProps) {
 
       {/* 플랫 그리드 */}
       <motion.div
-        className="grid gap-2"
-        style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(72px, 1fr))' }}
+        className="grid gap-1 md:gap-2 justify-center grid-techstack"
         variants={CONTAINER}
         initial="hidden"
         whileInView="visible"

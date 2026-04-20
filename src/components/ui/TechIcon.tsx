@@ -8,7 +8,9 @@ interface TechIconProps {
 
 export default function TechIcon({ item, size = 'md' }: TechIconProps) {
   const isSm = size === 'sm'
-  const containerCls = isSm ? 'w-9 h-9 rounded-lg' : 'w-16 h-16 rounded-2xl'
+  const containerCls = isSm
+    ? 'w-9 h-9 rounded-lg'
+    : 'w-10 h-10 md:w-16 md:h-16 rounded-lg md:rounded-2xl'
   const imgSize = isSm ? 20 : 36
   const textCls = isSm ? 'text-[10px]' : 'text-[14px]'
 

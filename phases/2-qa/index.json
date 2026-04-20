@@ -16,7 +16,8 @@
     {
       "step": 3,
       "name": "mobile-responsive",
-      "status": "pending"
+      "status": "completed",
+      "summary": "Hero py-16 md:py-24, TechStack 필터탭 overflow-x-auto+scrollbar-hide, ProjectModal px-5 md:px-8, Hero h1 clamp 44→32px, eyebrow 장식라인 sm 숨김, meta pill rounded-2xl sm:rounded-full, Experience h3 text-xl md:text-2xl, CoreStrengths h3 text-[18px] md:text-[22px]"
     },
     {
       "step": 4,

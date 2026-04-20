@@ -115,7 +115,9 @@ export default function Experience() {
                     </div>
                   )}
 
-                  <h3 className="font-display text-2xl font-bold text-ink mb-1">{item.company}</h3>
+                  <h3 className="font-display text-xl md:text-2xl font-bold text-ink mb-1">
+                    {item.company}
+                  </h3>
                   <p className="text-sm text-ink-muted mb-5">{item.role}</p>
 
                   {item.tasks && item.tasks.length > 0 && (
