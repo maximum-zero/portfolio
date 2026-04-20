@@ -28,7 +28,8 @@
     {
       "step": 5,
       "name": "inline-style-cleanup",
-      "status": "pending"
+      "status": "completed",
+      "summary": "--color-surface-glass·.border-l-accent 추가, Nav color-mix 교체, ProjectModal·Contact·Blog bg-surface/bg-card 클래스화"
     },
     {
       "step": 6,

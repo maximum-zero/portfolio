@@ -28,6 +28,7 @@
 
 :root {
   --color-accent-soft: color-mix(in oklab, var(--color-accent) 22%, transparent);
+  --color-surface-glass: color-mix(in oklab, var(--color-surface) 85%, transparent);
   --section-pad: 120px;
   --container: min(1120px, 100% - 32px);
   --container-narrow: min(880px, 100% - 32px);
@@ -125,6 +126,11 @@ body {
 }
 
 /* Icon shadow — adapts to dark mode via color-mix */
+/* Accent left border for ProjectModal SectionBlock */
+.border-l-accent {
+  border-left: 3px solid var(--color-accent);
+}
+
 /* TechStack icon grid — fixed column width matches icon size, no 1fr stretch */
 .grid-techstack {
   grid-template-columns: repeat(auto-fill, 40px);
