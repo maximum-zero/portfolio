@@ -46,7 +46,7 @@ export default function Hero() {
             MAXIMUM IMPACT<span className="text-accent">.</span>
           </span>
           <br />
-          <span className="text-outline-ink">ZERO</span>
+          <span className="text-outline-accent">ZERO</span>
           <span className="text-ink">
             {' '}
             NOISE<span className="text-accent">.</span>

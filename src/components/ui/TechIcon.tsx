@@ -15,8 +15,7 @@ export default function TechIcon({ item, size = 'md' }: TechIconProps) {
   return (
     <div className="group/icon relative flex items-center justify-center">
       <div
-        className={`${containerCls} bg-surface flex items-center justify-center transition-transform duration-200 group-hover/icon:-translate-y-0.5 cursor-default`}
-        style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05)' }}
+        className={`${containerCls} bg-surface shadow-icon flex items-center justify-center transition-transform duration-200 group-hover/icon:-translate-y-0.5 cursor-default`}
       >
         {item.iconPath ? (
           <Image
