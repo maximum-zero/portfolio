@@ -29,7 +29,7 @@ export default function Hero() {
         {/* eyebrow — 양쪽 수평선 */}
         <motion.p
           variants={reduced ? {} : FADE_UP}
-          className="font-mono text-xs tracking-[0.28em] text-ink-muted uppercase mb-9 flex items-center justify-center gap-3.5"
+          className="font-mono text-xs tracking-[0.15em] text-ink-muted uppercase mb-9 flex items-center justify-center gap-3.5"
         >
           <span className="w-7 h-px bg-current opacity-50" />
           최대영 — Backend Engineer

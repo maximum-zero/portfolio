@@ -10,7 +10,8 @@
     {
       "step": 2,
       "name": "layout-spacing",
-      "status": "pending"
+      "status": "completed",
+      "summary": "Certs section-pad 통일, FAB bottom-6 right-6, Hero eyebrow tracking 0.15em, Contact p-7"
     },
     {
       "step": 3,
