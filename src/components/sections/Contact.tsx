@@ -114,8 +114,7 @@ function ContactRow({
       target={href.startsWith('mailto') ? undefined : '_blank'}
       rel={href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
       aria-label={label}
-      className="contact-row group flex items-center gap-4 p-7 rounded-2xl border border-line transition-all duration-300"
-      style={{ background: 'var(--color-surface)' }}
+      className="contact-row group flex items-center gap-4 p-7 rounded-2xl border border-line transition-all duration-300 bg-surface"
     >
       <span className="contact-row__icon w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300 text-ink-muted">
         <Icon />

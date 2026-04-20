@@ -74,10 +74,7 @@ function ExternalIcon() {
 
 function SectionBlock({ label, items }: { label: string; items: string[] }) {
   return (
-    <div
-      className="pl-5 py-4 pr-6 rounded-r-xl"
-      style={{ borderLeft: '3px solid var(--color-accent)', background: 'var(--color-card)' }}
-    >
+    <div className="pl-5 py-4 pr-6 rounded-r-xl border-l-accent bg-card">
       <p className="font-display text-[15px] font-semibold text-ink mb-2.5">{label}</p>
       <ul className="grid gap-2">
         {items.map((item, i) => (
@@ -127,10 +124,7 @@ export default function ProjectModal({ project, onClose, onPrev, onNext }: Proje
         onClick={(e) => e.stopPropagation()}
       >
         {/* 닫기 */}
-        <div
-          className="sticky top-0 z-10 flex justify-end px-4 sm:px-6 pt-4 sm:pt-5 pb-2"
-          style={{ background: 'var(--color-surface)' }}
-        >
+        <div className="sticky top-0 z-10 flex justify-end px-4 sm:px-6 pt-4 sm:pt-5 pb-2 bg-surface">
           <button
             onClick={onClose}
             aria-label="닫기"

@@ -38,7 +38,7 @@ export default function Nav() {
       <div
         className="hidden md:flex items-center gap-1 px-1.5 py-1.5 border border-line rounded-full pointer-events-auto"
         style={{
-          background: 'color-mix(in oklab, var(--color-surface) 85%, transparent)',
+          background: 'var(--color-surface-glass)',
           boxShadow: '0 6px 24px rgba(0,0,0,0.04)',
         }}
       >
@@ -66,7 +66,7 @@ export default function Nav() {
       <div className="md:hidden pointer-events-auto w-full mx-4">
         <div
           className="flex items-center justify-between px-4 py-3 border border-line rounded-2xl"
-          style={{ background: 'color-mix(in oklab, var(--color-surface) 85%, transparent)' }}
+          style={{ background: 'var(--color-surface-glass)' }}
         >
           <a
             href="#"

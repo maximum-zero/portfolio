@@ -35,8 +35,7 @@ export default function Blog() {
               href={post.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="blog-card group flex flex-col gap-4 p-7 rounded-2xl border border-line min-h-[200px] transition-all duration-300 hover:-translate-y-0.5"
-              style={{ background: 'var(--color-surface)' }}
+              className="blog-card group flex flex-col gap-4 p-7 rounded-2xl border border-line min-h-[200px] transition-all duration-300 hover:-translate-y-0.5 bg-surface"
             >
               <span className="font-mono text-[11px] tracking-[0.1em] text-ink-muted">
                 {post.date}
