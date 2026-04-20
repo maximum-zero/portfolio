@@ -79,6 +79,26 @@
 
 ---
 
+### ADR-009: Framer Motion 사용 컴포넌트는 Client Component
+
+**상태**: 채택
+
+**배경**:
+Framer Motion의 `motion.*`, `whileInView`, `useReducedMotion` 등은 브라우저 API에 의존하므로
+`'use client'` 없이 사용할 수 없다.
+
+**결정**:
+Framer Motion을 사용하는 섹션 컴포넌트는 인터랙션이 없더라도 `'use client'`를 선언한다.
+애니메이션이 필요 없는 컴포넌트(Certs, Portfolio, Blog 등)는 Server Component로 유지한다.
+
+**영향**:
+Hero, CoreStrengths, Experience, Contact — `'use client'`
+
+**트레이드오프**: 해당 컴포넌트의 JS가 클라이언트 번들에 포함됨. 단, 데이터 fetch가 없고
+정적 콘텐츠만 렌더하므로 hydration 비용은 최소화됨
+
+---
+
 ### ADR-008: 경력과 교육을 단일 Experience 타임라인으로 통합
 
 **결정**: Career + Education → `Experience.tsx` 하나로 통합. 중앙선 alternating 레이아웃  

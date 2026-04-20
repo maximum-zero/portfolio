@@ -15,14 +15,14 @@ src/
 │   │   ├── FloatingActions.tsx # 우하단 FAB (Client)
 │   │   └── Footer.tsx          # 슬로건 + Copyright
 │   ├── sections/
-│   │   ├── Hero.tsx            # 동심원 ring + 슬로건 (Server)
-│   │   ├── Pillars.tsx         # 핵심 역량 텍스트 카드 3개 (Server)
+│   │   ├── Hero.tsx            # 동심원 ring + 슬로건 (Client — Framer Motion)
+│   │   ├── CoreStrengths.tsx   # 핵심 역량 텍스트 카드 3개 (Client — Framer Motion)
 │   │   ├── TechStack.tsx       # 기술 아이콘 — TechStackClient 포함 (Server 래퍼)
-│   │   ├── Experience.tsx      # 경력·교육 통합 타임라인 — 서버에서 sort (Server)
+│   │   ├── Experience.tsx      # 경력·교육 통합 타임라인 (Client — Framer Motion)
 │   │   ├── Certs.tsx           # 자격증 목록 (Server)
 │   │   ├── Portfolio.tsx       # 프로젝트 — ProjectList 포함 (Server 래퍼)
 │   │   ├── Blog.tsx            # 블로그 포스트 목록 (Server)
-│   │   └── Contact.tsx         # 연락처 목록 (Server)
+│   │   └── Contact.tsx         # 연락처 목록 (Client — Framer Motion)
 │   └── ui/
 │       ├── TechIcon.tsx        # Simple Icons CDN + rounded-xl 컨테이너(w/h 고정) + CSS 툴팁
 │       ├── ProjectModal.tsx    # 프로젝트 상세 팝업 + URL 쿼리 스트링 (Client)
@@ -48,12 +48,20 @@ src/
 ## 패턴
 
 - **Server Components 기본**: 정적 콘텐츠를 렌더링하는 섹션은 서버 컴포넌트
-- **Client Component 예외**: 인터랙션이 필요한 컴포넌트만 `'use client'` 선언
+- **Client Component 예외**: 인터랙션 또는 Framer Motion 사용 컴포넌트만 `'use client'` 선언
+
+> **참고**: Hero, CoreStrengths, Experience, Contact는 Framer Motion `whileInView` 애니메이션을 위해
+> `'use client'`로 구현됨. 데이터 fetch 없이 애니메이션만 사용하는 경우에도
+> Framer Motion은 브라우저 API에 의존하므로 Client Component를 요구한다. (ADR-009 참고)
 
 | 컴포넌트        | 클라이언트 이유                                                  |
 | --------------- | ---------------------------------------------------------------- |
 | Nav             | 스크롤 감지(useActiveSection), active 섹션 상태, 모바일 드롭다운 |
 | FloatingActions | 스크롤 위치 (맨 위로 버튼 노출)                                  |
+| Hero            | Framer Motion whileInView 애니메이션                             |
+| CoreStrengths   | Framer Motion whileInView 애니메이션                             |
+| Experience      | Framer Motion whileInView 애니메이션                             |
+| Contact         | Framer Motion whileInView 애니메이션                             |
 | TechStackClient | 카테고리 필터 상태                                               |
 | ProjectList     | Modal 상태, 선택된 프로젝트, history API                         |
 | ProjectModal    | 열림/닫힘, 이전/다음 네비게이션                                  |
@@ -71,7 +79,7 @@ TechStack:
     카테고리 탭 클릭 → useState(activeCategory) → opacity 인터랙션
 
 Experience:
-    Experience.tsx(서버) → career 데이터 import → 최신순 sort(1회) → 중앙선 타임라인 렌더
+    Experience.tsx(클라이언트) → career 데이터 import → 최신순 sort(1회) → 중앙선 타임라인 렌더
 
 Portfolio:
     Portfolio.tsx(서버) → 프로젝트 데이터 → ProjectList(클라이언트)에 props 전달
