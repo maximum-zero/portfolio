@@ -2,7 +2,7 @@ import { CERTS } from '@/data/certs'
 
 export default function Certs() {
   return (
-    <section className="py-24 md:py-32">
+    <section style={{ padding: 'var(--section-pad) 0' }}>
       <div style={{ width: 'var(--container-narrow)', margin: '0 auto' }}>
         <div>
           {/* 섹션 헤더 */}
