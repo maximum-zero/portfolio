@@ -117,6 +117,13 @@ body {
   animation: slide-down 1.8s ease-in-out infinite;
 }
 
+/* Icon shadow — adapts to dark mode via color-mix */
+.shadow-icon {
+  box-shadow:
+    0 2px 8px color-mix(in oklab, var(--color-ink) 8%, transparent),
+    0 1px 3px color-mix(in oklab, var(--color-ink) 5%, transparent);
+}
+
 /* Text outline utilities */
 .text-outline-accent {
   -webkit-text-stroke: 1.5px var(--color-accent);

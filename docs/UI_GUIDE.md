@@ -94,7 +94,7 @@
 | Hero 슬로건 (h1) | `font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-widest uppercase leading-[1.1] text-ink` |
 | Hero ZERO (span) | `.text-outline-accent` — `-webkit-text-stroke: 2px accent`, `color: transparent`                                            |
 | Hero 소개글      | `font-body text-base md:text-lg font-normal text-ink-body leading-relaxed`                                                  |
-| 섹션 eyebrow     | `font-mono text-xs tracking-[0.15em] text-accent uppercase`                                                                 |
+| 섹션 eyebrow     | `font-mono text-xs tracking-[0.15em] text-ink-muted uppercase`                                                              |
 | 섹션 제목 (h2)   | `font-display text-3xl md:text-4xl font-bold text-ink`                                                                      |
 | 섹션 한 줄 설명  | `font-body text-lg md:text-xl font-normal text-ink-muted`                                                                   |
 | 카드 제목 (h3)   | `font-body text-lg font-semibold text-ink`                                                                                  |
