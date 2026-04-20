@@ -8,7 +8,6 @@ const NAV_ITEMS = [
   { label: '기술', id: 'techstack' },
   { label: '경험', id: 'experience' },
   { label: '프로젝트', id: 'portfolio' },
-  { label: '연락', id: 'contact' },
 ]
 
 const SECTION_IDS = NAV_ITEMS.map((item) => item.id)
