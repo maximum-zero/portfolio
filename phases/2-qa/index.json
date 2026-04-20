@@ -22,7 +22,8 @@
     {
       "step": 4,
       "name": "content-policy",
-      "status": "pending"
+      "status": "completed",
+      "summary": "Nav 연락 제거(4개), 섹션 h2 포트폴리오→프로젝트, live URL 필터 동작 확인(수정 불필요)"
     },
     {
       "step": 5,
