@@ -19,7 +19,7 @@ export default function Portfolio() {
               lineHeight: 1.05,
             }}
           >
-            프로젝트
+            포트폴리오
           </h2>
           <p className="text-ink-muted mx-auto max-w-md" style={{ fontSize: '15px' }}>
             주요 프로젝트를 클릭하면 세부 내용을 확인할 수 있습니다.

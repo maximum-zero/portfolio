@@ -1,5 +1,7 @@
 import type { CoreStrengthItem } from '@/types/profile'
 
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://maximum0.vercel.app'
+
 export const PROFILE = {
   name: '최대영',
   nickname: 'maximum0',
