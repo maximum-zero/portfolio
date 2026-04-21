@@ -12,7 +12,13 @@
     },
     {
       "dir": "2-qa",
-      "status": "pending"
+      "status": "completed",
+      "completed_at": "2026-04-21T00:00:00+0900"
+    },
+    {
+      "dir": "3-deployment",
+      "status": "completed",
+      "completed_at": "2026-04-21T13:37:15+0900"
     }
   ]
 }

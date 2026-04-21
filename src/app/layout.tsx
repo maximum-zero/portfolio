@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import localFont from 'next/font/local'
-import { INTRO, PROFILE } from '@/data/profile'
+import { INTRO, PROFILE, SITE_URL } from '@/data/profile'
 import Nav from '@/components/layout/Nav'
 import FloatingActions from '@/components/layout/FloatingActions'
 import './globals.css'
@@ -25,12 +25,15 @@ const pretendard = localFont({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: `${PROFILE.name} | ${PROFILE.role}`,
   description: INTRO.split('.')[0] + '.',
   openGraph: {
     title: `${PROFILE.name} | ${PROFILE.role}`,
     description: INTRO.split('.')[0] + '.',
     type: 'website',
+    url: SITE_URL,
+    siteName: `${PROFILE.name} 포트폴리오`,
   },
   twitter: {
     card: 'summary_large_image',
