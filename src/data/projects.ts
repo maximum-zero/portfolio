@@ -130,7 +130,11 @@ export const PROJECTS: Project[] = [
       'JMeter',
       'Pinpoint',
     ],
-    links: [],
+    links: [
+      { title: 'GitHub (BE)', url: 'https://github.com/maximum-zero/KBE5_CKT_BE' },
+      { title: 'GitHub (FE)', url: 'https://github.com/maximum-zero/KBE5_CKT_FE' },
+      { title: 'GitHub (Emulator)', url: 'https://github.com/KBE5-CKT/emulator-node' },
+    ],
     detail: {
       overview: [
         '다수 차량의 위치 데이터를 수집·처리·시각화하는 시스템으로 실시간 처리 성능과 병목 문제를 개선',
@@ -269,7 +273,7 @@ export const PROJECTS: Project[] = [
       'Spring Boot',
     ],
 
-    links: [{ title: 'Live', url: 'https://baza.co.kr/' }],
+    links: [{ title: 'Live(Web)', url: 'https://baza.co.kr/' }],
 
     detail: {
       overview: [
