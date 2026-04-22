@@ -217,12 +217,16 @@ export default function ProjectModal({ project, onClose, onPrev, onNext }: Proje
           {/* 개요 */}
           <div className="mb-6 pt-6 border-t border-line">
             <p className="font-display text-[15px] font-semibold text-ink mb-4">개요</p>
-            <div className="flex items-start gap-2">
-              <span className="text-ink flex-shrink-0 mt-[1px]">•</span>
-              <p className="text-sm md:text-[15px] font-light text-ink-body leading-relaxed">
-                {project.detail.overview}
-              </p>
-            </div>
+            <ul className="grid gap-3">
+              {project.detail.overview.map((item, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <span className="text-ink flex-shrink-0 mt-[1px]">•</span>
+                  <p className="text-sm md:text-[15px] font-light text-ink-body leading-relaxed">
+                    {item}
+                  </p>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* 주요기능 */}
