@@ -10,7 +10,7 @@ export interface ProjectLink {
 }
 
 export interface ProjectDetail {
-  overview: string
+  overview: string[]
   features?: string[] // 주요기능
   problem: string[]
   solution: string[]
