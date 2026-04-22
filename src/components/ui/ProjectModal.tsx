@@ -14,13 +14,6 @@ interface ProjectModalProps {
   onNext?: () => void
 }
 
-const LINK_LABELS: Record<string, string> = {
-  githubBe: 'GitHub (BE)',
-  githubFe: 'GitHub (FE)',
-  githubInfra: 'GitHub (Infra)',
-  live: 'Live',
-}
-
 function ProjectIcon({ icon, title }: { icon?: string; title: string }) {
   if (icon) {
     return (
@@ -106,7 +99,7 @@ export default function ProjectModal({ project, onClose, onPrev, onNext }: Proje
     }
   }, [onClose, onPrev, onNext])
 
-  const links = Object.entries(project.links).filter(([, v]) => v)
+  const links = project.links.filter((l) => l.url)
 
   return (
     <div
@@ -186,15 +179,15 @@ export default function ProjectModal({ project, onClose, onPrev, onNext }: Proje
                 관련 링크
               </p>
               <div className="flex flex-wrap gap-4">
-                {links.map(([key, url]) => (
+                {links.map((link) => (
                   <a
-                    key={key}
-                    href={url}
+                    key={link.title}
+                    href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-[13px] font-mono text-ink-muted hover:text-ink transition-colors"
                   >
-                    {LINK_LABELS[key] ?? key} <ExternalIcon />
+                    {link.title} <ExternalIcon />
                   </a>
                 ))}
               </div>

@@ -12,10 +12,10 @@ export const PROJECTS: Project[] = [
     summary:
       '설계 기반으로 구조를 정의하고 phase/step 단위로 개발을 분리하여 AI 협업 기반으로 구현한 포트폴리오 사이트',
     techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vercel', 'Claude Code'],
-    links: {
-      githubFe: 'https://github.com/maximum-zero/portfolio',
-      live: 'https://portfolio-sigma-two-d7qow2is2t.vercel.app/',
-    },
+    links: [
+      { title: 'GitHub', url: 'https://github.com/maximum-zero/portfolio' },
+      { title: 'Live', url: 'https://portfolio-sigma-two-d7qow2is2t.vercel.app/' },
+    ],
     detail: {
       overview: [
         '컴포넌트 구조와 데이터 기반 렌더링을 중심으로 설계한 포트폴리오 사이트',
@@ -73,11 +73,11 @@ export const PROJECTS: Project[] = [
       'React',
       'TypeScript',
     ],
-    links: {
-      githubBe: 'https://github.com/maximum-zero/fastpick-be',
-      githubFe: 'https://github.com/maximum-zero/fastpick-fe',
-      githubInfra: 'https://github.com/maximum-zero/fastpick-infra',
-    },
+    links: [
+      { title: 'GitHub (BE)', url: 'https://github.com/maximum-zero/fastpick-be' },
+      { title: 'GitHub (FE)', url: 'https://github.com/maximum-zero/fastpick-fe' },
+      { title: 'GitHub (Infra)', url: 'https://github.com/maximum-zero/fastpick-infra' },
+    ],
     detail: {
       overview: [
         '대량 트래픽 환경에서 선착순 쿠폰 발급 시스템을 설계하고 성능 병목과 동시성 문제를 구조적으로 개선',
@@ -130,10 +130,7 @@ export const PROJECTS: Project[] = [
       'JMeter',
       'Pinpoint',
     ],
-    links: {
-      githubBe: '',
-      githubFe: '',
-    },
+    links: [],
     detail: {
       overview: [
         '다수 차량의 위치 데이터를 수집·처리·시각화하는 시스템으로 실시간 처리 성능과 병목 문제를 개선',
@@ -172,7 +169,7 @@ export const PROJECTS: Project[] = [
       'Vimeo 청크 업로드 구조로 전환하여 대용량 영상 업로드의 실패율과 타임아웃 문제를 해결한 시스템',
 
     techStack: ['JavaScript', 'React', 'Next.js', 'Zustand', 'Vimeo API', 'Spring Boot', 'Vercel'],
-    links: {},
+    links: [],
     detail: {
       overview: [
         '대용량 영상 업로드 과정의 안정성 문제를 해결하기 위해 업로드 구조를 개선',
@@ -211,9 +208,7 @@ export const PROJECTS: Project[] = [
     summary:
       'Nuxt.js 기반으로 기존 사이트를 이커머스 구조로 전환하고 사용자 탐색 흐름과 관리자 기능을 개선한 프로젝트',
 
-    links: {
-      live: 'https://www.euroceramic.co.kr/',
-    },
+    links: [{ title: 'Live', url: 'https://www.euroceramic.co.kr/' }],
 
     techStack: [
       'JavaScript',
@@ -274,9 +269,7 @@ export const PROJECTS: Project[] = [
       'Spring Boot',
     ],
 
-    links: {
-      live: 'https://baza.co.kr/',
-    },
+    links: [{ title: 'Live', url: 'https://baza.co.kr/' }],
 
     detail: {
       overview: [
