@@ -32,7 +32,7 @@ export default function Hero() {
           className="font-mono text-xs tracking-[0.15em] text-ink-muted uppercase mb-9 flex items-center justify-center gap-3.5"
         >
           <span className="hidden sm:block w-7 h-px bg-current opacity-50" />
-          최대영 — Backend Engineer
+          최대영 — Fullstack Engineer
           <span className="hidden sm:block w-7 h-px bg-current opacity-50" />
         </motion.p>
 
@@ -66,16 +66,16 @@ export default function Hero() {
           >
             사용자 관점의 노이즈
           </strong>
-          를 지우고,
+          를 제거하고,
           <br />
-          백엔드에서{' '}
+          백엔드에서 발생하는{' '}
           <strong
             className="font-semibold px-1.5 py-px rounded"
             style={{ background: 'var(--color-accent-soft)' }}
           >
             시스템 성능의 한계
           </strong>
-          를 지웁니다.
+          를 개선합니다.
         </motion.p>
 
         {/* meta row */}
