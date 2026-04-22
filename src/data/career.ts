@@ -8,12 +8,12 @@ export const CAREER: CareerItem[] = [
     period: '2021.10 ~ 2025.01',
     duration: '3년 4개월',
     tasks: [
-      '이커머스 및 관리자 시스템 전반의 Full-stack 개발 및 유지보수 수행',
-      'SSR 및 SEO 구조 개선을 통해 웹 서비스 성능 및 검색 노출 최적화',
-      '대용량 영상 업로드 시스템(Vimeo Chunk Upload) 도입으로 전송 안정성 개선',
-      '보안 취약점 대응(XSS / SQL Injection / Bot Attack) 및 입력값 검증 구조 강화',
-      '레거시 기반 웹 서비스(Vue / jQuery / JSP) 유지보수 및 구조 개선을 통한 안정성 향상',
-      '통합 회원 시스템 및 외부 서비스 연동을 통한 인증 구조 통합 경험',
+      '이커머스 및 관리자 시스템 전반의 Full-stack 개발 및 운영',
+      'SSR 및 SEO 구조 개선을 통해 초기 렌더링 성능 및 검색 노출 구조 최적화',
+      'Vimeo Chunk Upload 도입으로 대용량 영상 업로드 안정성 및 전송 구조 개선',
+      'XSS / SQL Injection / Bot Attack 대응 및 입력 검증 구조 강화로 보안 체계 개선',
+      '레거시(Vue / jQuery / JSP) 구조 개선을 통해 유지보수성과 서비스 안정성 향상',
+      '통합 인증 시스템 참여 및 A사 서비스 인증 구조 분석 및 연동 적용',
     ],
     stack: [
       'Java',
@@ -40,9 +40,9 @@ export const CAREER: CareerItem[] = [
     period: '2021.05 ~ 2021.10',
     duration: '6개월',
     tasks: [
-      '초기 MVP 서비스 개발에 참여하여 핵심 기능 중심으로 빠른 서비스 출시 지원',
-      'Firebase Realtime Database 기반으로 실시간 채팅 및 푸시 알림 기능 구현',
-      '서버리스 구조 기반으로 실시간 데이터 통신 아키텍처 설계 및 구현',
+      '초기 MVP 서비스 개발 및 실시간 기능 중심 구조 설계 경험',
+      'Firebase Realtime Database 기반 실시간 채팅 및 푸시 알림 기능 구현',
+      '서버리스 기반 실시간 데이터 통신 구조 설계 및 구현',
       'Lazy Loading 및 이미지 최적화를 통해 초기 로딩 성능 및 사용자 경험 개선',
     ],
     stack: [
