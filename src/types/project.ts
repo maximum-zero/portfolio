@@ -3,10 +3,8 @@ export type ProjectCategory = 'backend' | 'frontend' | 'fullstack'
 export type ProjectType = 'personal' | 'team' | 'work'
 
 export interface ProjectLink {
-  githubBe?: string
-  githubFe?: string
-  githubInfra?: string
-  live?: string
+  title: string
+  url: string
 }
 
 export interface ProjectDetail {
@@ -27,6 +25,6 @@ export interface Project {
   summary: string // 카드용 한 줄 설명
   icon?: string // public/icons/ 경로 (예: '/icons/project.png')
   techStack: string[]
-  links: ProjectLink
+  links: ProjectLink[]
   detail: ProjectDetail
 }
